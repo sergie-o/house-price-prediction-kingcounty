@@ -76,5 +76,59 @@ This project explores both:
 1. **Clone this repository**  
    ```bash
    `git clone https://github.com/sergie-o/house-price-prediction-kingcounty.git`
+2. **Navigate to the project folder**
+   ```bash
+    cd house-price-prediction-kingcounty
+3. **Open the Jupyter Notebook**
+- If you use Jupyter Notebook:
+   ```bash
+   jupyter notebook "king_countyproject.ipynb"
+- Or, open it in VSCode by double-clicking the file or using:
+   ```bash
+    code "king_countyproject.ipynb"
+4. **Ensure the dataset is in the correct location**
+- The file king_county_houses_aa.csv must be in the same directory as the notebook.
+5. Run all cells
+- Select Cell > Run All in Jupyter Notebook or VSCode to reproduce the analysis.
 
-   
+---
+
+## 🚀 Next Steps
+-  Incorporate geographical features 🗺️: Analyze the impact of lat and long in more detail. Use clustering (like K-Means) to group similar neighborhoods and see how location-based features influence pricing.
+
+-  Implement a more robust time-series model 🕰️: Use date to analyze price trends over the year. A time-series model could better capture seasonal fluctuations in the housing market.
+
+-  Explain model predictions 🤖: Use a library like SHAP or LIME to explain why your best-performing models (XGBoost or Random Forest) made specific price predictions, providing more transparent and trustworthy insights.
+
+---
+## Repo Structure
+
+house-price-prediction-kingcounty/
+│
+├── data/                               # Raw and prepared datasets
+│   ├── kc_house_data.csv                # Original dataset
+│   └── kc_house_data_cleaned.csv        # (optional) cleaned/processed version
+│
+├── notebooks/                          # Jupyter notebooks
+│   └── king_county_housing_analysis.ipynb   # Main analysis & modeling
+│
+├── visuals/                            # Plots, charts, and feature images
+│   ├── correlation_heatmap.png
+│   ├── price_distribution.png
+│   ├── feature_engineering.png
+│   ├── model_leaderboard.png
+│   └── house_price_feature.png          # Feature image for README
+│
+├── results/                            # Results & tables
+│   ├── model_comparison.csv             # Saved metrics leaderboard
+│   └── feature_importance.csv           # Optional: feature importance outputs
+│
+├── src/                                # Scripts (optional if you modularize)
+│   ├── data_preprocessing.py
+│   ├── feature_engineering.py
+│   ├── train_models.py
+│   └── evaluate_models.py
+│
+├── requirements.txt                    # Python dependencies
+├── README.md                           # Project documentation
+└── LICENSE                             # (optional) license file
