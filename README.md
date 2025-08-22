@@ -101,33 +101,24 @@ This project explores both:
 -  Explain model predictions 🤖: Use a library like SHAP or LIME to explain why your best-performing models (XGBoost or Random Forest) made specific price predictions, providing more transparent and trustworthy insights.
 
 ---
-## Repo Structure
+## 📁 Repository Structure  
+```bash
 
 house-price-prediction-kingcounty/
 │
 ├── data/                               # Raw and prepared datasets
-│   ├── kc_house_data.csv                # Original dataset
-│   └── kc_house_data_cleaned.csv        # (optional) cleaned/processed version
+│   ├── king_county_houses_aa.csv                # Original dataset
+│         
 │
 ├── notebooks/                          # Jupyter notebooks
-│   └── king_county_housing_analysis.ipynb   # Main analysis & modeling
+│   └── king_countyproject.ipynb   # Main analysis & modeling
 │
 ├── visuals/                            # Plots, charts, and feature images
 │   ├── correlation_heatmap.png
 │   ├── price_distribution.png
 │   ├── feature_engineering.png
 │   ├── model_leaderboard.png
-│   └── house_price_feature.png          # Feature image for README
-│
-├── results/                            # Results & tables
-│   ├── model_comparison.csv             # Saved metrics leaderboard
-│   └── feature_importance.csv           # Optional: feature importance outputs
-│
-├── src/                                # Scripts (optional if you modularize)
-│   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   ├── train_models.py
-│   └── evaluate_models.py
+│   └── house_price_feature.png          # Feature image for README 
 │
 ├── requirements.txt                    # Python dependencies
 ├── README.md                           # Project documentation
