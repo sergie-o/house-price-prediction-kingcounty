@@ -56,92 +56,25 @@ This project explores both:
 - **Feature engineering + tuning** proved essential for squeezing extra performance.  
 
 ---
-🛠 Steps Taken
-Data Cleaning 🧹 – Removed irrelevant IDs, handled duplicates, extracted year, month, and dayofweek from dates.
 
-Exploratory Data Analysis (EDA) 🔍 – Correlation heatmaps, trend analysis, and visualization of pricing distributions.
+## 🔄 How to Reproduce  
 
-Feature Engineering ⚙️ – Standardization, cyclical encoding of date features, and dropping weakly correlated predictors.
+**Prerequisites**  
+- Python 3.12+ 🐍  
 
-Modeling 🤖 – Evaluated multiple models:
+**Libraries Used**  
+- **Data Handling**: `pandas`, `numpy`  
+- **Visualization**: `matplotlib`, `seaborn`, `plotly`  
+- **Machine Learning**:  
+  - `scikit-learn` (`LinearRegression`, `StandardScaler`, `train_test_split`, `metrics`, `Ridge`, `RidgeCV`, `Pipeline`)  
+  - `xgboost` (`XGBRegressor`)  
+  - `GradientBoostingRegressor`  
+- **Hyperparameter Tuning**: `scipy` (`randint`, `uniform`), `RandomizedSearchCV`, `GridSearchCV`  
+- **Utilities**: `re`, `tabulate`, `prettytable`  
 
-Linear Regression (baseline + variants with feature engineering)
+**Run Instructions**  
+1. **Clone this repository**  
+   ```bash
+   `git clone https://github.com/sergie-o/house-price-prediction-kingcounty.git`
 
-Ridge, Lasso, ElasticNet regularization
-
-Random Forest & Gradient Boosting
-
-XGBoost (with hyperparameter tuning)
-
-Hyperparameter Tuning 🎚 – Used RandomizedSearchCV to optimize Random Forest and XGBoost.
-
-Results Leaderboard 🏆 – Compared models using MSE, RMSE, and R² on train/test sets.
-
-🚀 Main Insights
-Square footage & grade are the strongest predictors of price 🏗.
-
-Year built/renovated has moderate influence, while latitude/longitude correlations are weak.
-
-Linear Regression baseline: R² ≈ 0.70.
-
-Ridge/Lasso gave small stability improvements.
-
-Random Forest & XGBoost dominated with R² ≈ 0.85–0.89 after tuning, reducing RMSE significantly.
-
-Feature engineering + tuning proved essential for squeezing extra performance.
-
-🔄 How to Reproduce
-Prerequisites:
-
-Python 3.12+ 🐍
-
-Libraries:
-
-Data Handling: pandas, numpy
-
-Visualization: matplotlib, seaborn, plotly
-
-Machine Learning: scikit-learn (for LinearRegression, StandardScaler, train_test_split, mean_squared_error, Ridge, RidgeCV, Pipeline), xgboost (for XGBRegressor), statsmodels
-
-Hyperparameter Tuning: scipy (for randint, uniform)
-
-Utilities: re, tabulate, prettytable
-
-Run Instructions:
-
-Clone this repository
-
-Bash
-
-git clone https://github.com/sergie-o/house-price-prediction-kingcounty.git
-Navigate to the project folder
-
-Bash
-
-cd house-price-prediction-kingcounty
-Open the Jupyter Notebook
-
-If you use Jupyter Notebook:
-
-Bash
-
-jupyter notebook "king_county_housing_analysis.ipynb"
-Or, open it in VSCode by double-clicking the file or using:
-
-Bash
-
-code "king_county_housing_analysis.ipynb"
-Ensure the dataset is in the correct location
-
-The file kc_house_data.csv must be in the data folder inside your project directory.
-
-Run all cells
-
-Select Cell > Run All in Jupyter Notebook or VSCode to reproduce the analysis.
-
-🚀 Next Steps
-Incorporate geographical features 🗺️: Analyze the impact of lat and long in more detail. Use clustering (like K-Means) to group similar neighborhoods and see how location-based features influence pricing.
-
-Implement a more robust time-series model 🕰️: Use date to analyze price trends over the year. A time-series model could better capture seasonal fluctuations in the housing market.
-
-Explain model predictions 🤖: Use a library like SHAP or LIME to explain why your best-performing models (XGBoost or Random Forest) made specific price predictions, providing more transparent and trustworthy insights.
+   
