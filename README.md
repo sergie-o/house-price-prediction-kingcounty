@@ -4,7 +4,7 @@ Can algorithms decode the housing market?
 In this project, I apply **machine learning techniques** on **21,000+ home sales** from King County (Seattle area, May 2014 – May 2015) to uncover which features — from square footage to renovations — drive property values, and to build predictive models that **estimate sale prices with accuracy**.  
 
 <p align="center">
-  <img src="visuals/house_price_feature.png" alt="King County House Price Prediction" width="800">
+  <img src="https://github.com/sergie-o/house-price-prediction-kingcounty/blob/main/651ECB65-0269-4014-9BCF-FAC3D2A46F2F.png" width="800">
 </p>
 
 ---
